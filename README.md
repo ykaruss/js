@@ -1,5 +1,12 @@
 #JavaScript
 
+Multi-paradigma: com base em protótipo funcional, imperativo e scripts  
+Criado: Brendan Eich  
+Estilo de tipagem: Dinâmica, fraca e implícita
+O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
+* O lado cliente do JavaScript fornece objetos para controlar um navegador web e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que uma aplicação coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e de navegação da página.  
+* O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
+
 #Referências
 https://github.com/braziljs/eloquente-javascript  
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
@@ -7,43 +14,6 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
 #Ferramentas
 Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
 Nodejs - https://nodejs.org/en/  
-
-#Conteúdo (Parte 1: Linguagem)
-O que é Javascript?  
-Valores, Tipos e Operadores  
-Estrutura do Programa  
-Funções  
-Estrutura de Dados: Objeto e Array  
-Funções de Ordem Superior  
-A Vida Secreta dos Objetos  
-Prática: Vida Eletrônica  
-Erros e Manipulação de Erros  
-Expressões Regulares  
-Módulos  
-Prática: A Linguagem de Programação  
-Conteúdo (Parte 2: Navegador)  
-JavaScript e o Navegador  
-O Document Object Model  
-Manipulando Eventos  
-Projeto: Plataforma de Jogo  
-Desenhando no Canvas  
-HTTP  
-Formulários e Campos de Formulários  
-Projeto: Um Programa de Pintura  
-Conteúdo (Parte 3: Node.js)  
-Node.js  
-Projeto: Website de Compartilhamento de Habilidades  
-
-#O que é JavaScript?
-JavaScript é uma linguagem de script orientada a objetos, multiplataforma.  
-..* É uma linguagem pequena e leve. Dentro de um ambiente de host (por exemplo, um navegador web) o JavaScript pode ser ligado aos objetos deste ambiente para prover um controle programático sobre eles.  
-..* JavaScript  tem uma biblioteca padrão de objetos, como: Array, Date, e Math, e um conjuntos de elementos que formam o núcleo da linguagem, tais como: operadores, estruturas de controle e declarações.   
-..* Nós vamos usar > console.log() nos códigos de exemplo para indicar que desejamos ver o resultado da avaliação de algo. Quando você executar tais códigos, o valor produzido será mostrado na tela, entretanto, a forma como ele será apresentado vai depender do ambiente JavaScript que você usar para rodar os códigos.  
-
-#O que é JavaScript?
-O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
-..* O lado cliente do JavaScript estende-se do núcleo lingutytypeof Number(1)peof Infinity === 'number';agem, fornecendo objetos para controlar um navegador web e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que uma aplicação coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e de navegação da página.  
-..* O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
 
 #Expressão e Afirmação
 * Expressões podem ser encadeadas de forma semelhante às subfrases usadas na linguagem humana - uma subfrase pode conter sua própria subfrase, e assim por diante. Isto nos permite combinar expressões para expressar computações complexas arbitrariamente.
@@ -67,20 +37,20 @@ Usa a palavra reservada var;
 > soma+=++soma;
 > console.log(soma);
 
-Ambiente
-A coleção de variáveis e seus valores que existem em um determinado tempo é chamado de environment (ambiente).
-Quando um programa inicia, o ambiente não está vazio. Ele irá conter no mínimo o número de variáveis que fazem parte do padrão da linguagem. E na maioria das vezes haverá um conjunto adicional de variáveis que fornecem maneiras de interagir com o sistema envolvido. 
+#Ambiente
+A coleção de variáveis e seus valores que existem em um determinado tempo é chamado de environment (ambiente).  
+Quando um programa inicia, o ambiente não está vazio. Ele irá conter no mínimo o número de variáveis que fazem parte do padrão da linguagem. E na maioria das vezes haverá um conjunto adicional de variáveis que fornecem maneiras de interagir com o sistema envolvido.  
 Por exemplo, em um navegador, existem variáveis que apontam para funcionalidades que permitem a você inspecionar e influenciar no atual carregamento do website, e ler a entrada do mouse e teclado da pessoa que está usando o navegador.
-Valores, Tipos e Operadores
+Valores, Tipos e Operadores  
 
-Existem seis tipos básicos de valores no JavaScript:
-Número
-String
-Booleans 
-Undefined 
-Objetos
-Funções
-Números
+Existem seis tipos básicos de valores no JavaScript:  
++Número
++String
++Booleans 
++Undefined 
++Objetos
++Funções
++Números
 
 > typeof 37 === 'number';
 > typeof 3.14 === 'number';
