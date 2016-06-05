@@ -5,9 +5,8 @@ https://github.com/braziljs/eloquente-javascript
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
 
 #Ferramentas
-Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/
-Nodejs - https://nodejs.org/en/
-Você escolhe - https://www.google.com.br/#q=JavaScript+Interpreter
+Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
+Nodejs - https://nodejs.org/en/  
 
 #Conteúdo (Parte 1: Linguagem)
 O que é Javascript?  
@@ -37,19 +36,19 @@ Projeto: Website de Compartilhamento de Habilidades
 
 #O que é JavaScript?
 JavaScript é uma linguagem de script orientada a objetos, multiplataforma.  
-É uma linguagem pequena e leve. Dentro de um ambiente de host (por exemplo, um navegador web) o JavaScript pode ser ligado aos objetos deste ambiente para prover um controle programático sobre eles.  
-JavaScript  tem uma biblioteca padrão de objetos, como: Array, Date, e Math, e um conjuntos de elementos que formam o núcleo da linguagem, tais como: operadores, estruturas de controle e declarações.   
-Nós vamos usar > console.log() nos códigos de exemplo para indicar que desejamos ver o resultado da avaliação de algo. Quando você executar tais códigos, o valor produzido será mostrado na tela, entretanto, a forma como ele será apresentado vai depender do ambiente JavaScript que você usar para rodar os códigos.  
+..* É uma linguagem pequena e leve. Dentro de um ambiente de host (por exemplo, um navegador web) o JavaScript pode ser ligado aos objetos deste ambiente para prover um controle programático sobre eles.  
+..* JavaScript  tem uma biblioteca padrão de objetos, como: Array, Date, e Math, e um conjuntos de elementos que formam o núcleo da linguagem, tais como: operadores, estruturas de controle e declarações.   
+..* Nós vamos usar > console.log() nos códigos de exemplo para indicar que desejamos ver o resultado da avaliação de algo. Quando você executar tais códigos, o valor produzido será mostrado na tela, entretanto, a forma como ele será apresentado vai depender do ambiente JavaScript que você usar para rodar os códigos.  
 
 #O que é JavaScript?
-..*O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
-..*O lado cliente do JavaScript estende-se do núcleo lingutytypeof Number(1)peof Infinity === 'number';agem, fornecendo objetos para controlar um navegador web e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que uma aplicação coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e de navegação da página.  
-..*O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
+O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
+..* O lado cliente do JavaScript estende-se do núcleo lingutytypeof Number(1)peof Infinity === 'number';agem, fornecendo objetos para controlar um navegador web e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que uma aplicação coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e de navegação da página.  
+..* O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
 
 #Expressão e Afirmação
-..Expressões podem ser encadeadas de forma semelhante às subfrases usadas na linguagem humana - uma subfrase pode conter sua própria subfrase, e assim por diante. Isto nos permite combinar expressões para expressar computações complexas arbitrariamente.
-..Se uma expressão corresponde a um fragmento de sentença, uma afirmação, no JavaScript, corresponde a uma frase completa em linguagem humana. Um programa é simplesmente uma lista de afirmações.
-..O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
+* Expressões podem ser encadeadas de forma semelhante às subfrases usadas na linguagem humana - uma subfrase pode conter sua própria subfrase, e assim por diante. Isto nos permite combinar expressões para expressar computações complexas arbitrariamente.
+* Se uma expressão corresponde a um fragmento de sentença, uma afirmação, no JavaScript, corresponde a uma frase completa em linguagem humana. Um programa é simplesmente uma lista de afirmações.
+* O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
 ;
 1;
 !false;
