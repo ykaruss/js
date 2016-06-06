@@ -275,7 +275,7 @@ else
 alert("Large");
 ```
 
-##Loops While e Do
+##Loops While, Do While, for
 console.log(0);  
 console.log(2);  
 console.log(4);  
@@ -310,3 +310,60 @@ Console.log(output);
 for (var line = "#"; line.length < 8; line += "#")
 console.log(line);
 ```
+```javascript
+var size = 8, board = "";
+for (var y = 0; y < size; y++) {
+  for (var x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0)
+      board += " ";
+    else
+      board += "#";
+  }
+  board += "\n";
+}
+console.log(board);
+```
+
+##Indentando Código
+O papel da indentação dentro dos blocos é fazer com que a estrutura do código se destaque. Em códigos complexos, onde temos blocos dentro de blocos, pode se tornar extremamente difícil distinguir onde um bloco começa e o outro termina.  
+Com a indentação adequada, o formato visual do programa corresponde ao formato dos blocos contidos nele.  
+
+##Quebrando a execução de um Loop
+Ter uma condição que produza um resultado false não é a única maneira que um loop pode parar. Existe uma declaração especial chamada break que tem o efeito de parar a execução e sair do loop em questão.
+```javascript
+for (var current = 20; ; current++) {
+  if (current % 7 == 0)
+    break;
+}
+console.log(current);
+```
+Usar o operador resto (%) é uma maneira fácil de testar se um número é divisível por outro. Se for, o resto da divisão entre eles é zero.
+
+A palavra-chave continue é similar ao break, de modo que também influencia o progresso de um loop. Quando continue é encontrado no corpo de um loop, o controle de execução pula para fora do corpo e continua executando a próxima iteração do loop.
+```javascript
+for (i = 0; i < 10; i++) {
+ if (i === 3) { continue; }
+ console.log(i);
+}
+```
+
+##Resolvendo um valor com switch
+```javascript
+switch (prompt("What is the weather like?")) {
+  case "rainy":
+    console.log("Remember to bring an umbrella.");
+    break;
+  case "sunny":
+    console.log("Dress lightly.");
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default:
+    console.log("Unknown weather type!");
+    break;
+}
+```
+
+##Comentários
+//
+/* e */
