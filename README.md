@@ -79,42 +79,51 @@ typeof Number(1) === 'number';
 
 NaN é supostamente usado para indicar o resultado de alguma operação que não tenha sentido e, por isso, ele não será igual ao resultado de quaisquer outras operações sem sentido.  
 Strings
-> typeof "" === 'string';
-> typeof "bla" === 'string';
-> typeof (typeof 1) === 'string'; 
+```javascript
+typeof "" === 'string';
+typeof "bla" === 'string';
+typeof (typeof 1) === 'string'; 
 typeof always return a string
-> typeof String("abc") === 'string'; 
+typeof String("abc") === 'string'; 
 but never use this form!
-> typeof String("This is the first line\nAnd this is the second") === 'string';
-> typeof String("con" + "cat" + "e" + "nate") === 'string';
-Booleans
-> typeof true === 'boolean';
-> typeof false === 'boolean';
-> typeof Boolean(true) === 'boolean'; 
-but never use this form!
+typeof String("This is the first line\nAnd this is the second") === 'string';
+typeof String("con" + "cat" + "e" + "nate") === 'string';
+```
 
+Booleans
+```javascript
+typeof true === 'boolean';
+typeof false === 'boolean';
+typeof Boolean(true) === 'boolean'; 
+//but never use this form!
+```
 Valores Booleanos
-> console.log(3 > 2)
- → true
-> console.log(3 < 2)
-→ false
-> console.log("Aardvark" < "Zoroaster")
-→ true
-A forma na qual as strings são ordenadas é mais ou menos alfabética. Letras maiúsculas serão sempre “menores” que as minúsculas, portanto, “Z” < “a” é verdadeiro. Além disso, caracteres não alfabéticos (!, -, e assim por diante) também são incluídos nessa ordenação. A comparação de fato, é baseada no padrão Unicode, o JavaScript inicia da esquerda para a direita, comparando os códigos numéricos dos caracteres um por um.
-> console.log("Itchy" != "Scratchy")
-→ true
-> console.log(NaN == NaN)
-→ false
+```javascript
+console.log(3 > 2)
+console.log(3 < 2)
+console.log("Aardvark" < "Zoroaster")
+```
+A forma na qual as strings são ordenadas é mais ou menos alfabética. Letras maiúsculas serão sempre “menores” que as minúsculas, portanto, “Z” < “a” é verdadeiro. Além disso, caracteres não alfabéticos (!, -, e assim por diante) também são incluídos nessa ordenação. A comparação de fato, é baseada no padrão Unicode, o JavaScript inicia da esquerda para a direita, comparando os códigos numéricos dos caracteres um por um.  
+```javascript
+console.log("Itchy" != "Scratchy")
+console.log(NaN == NaN)
+```
 Undefined
-> typeof undefined === 'undefined';
-> typeof blabla === 'undefined'; // an undefined variable
+```javascript
+typeof undefined === 'undefined';
+typeof blabla === 'undefined'; // an undefined variable
+```
 Objetos
-> typeof {a:1} === 'object';
-> typeof [1, 2, 4] === 'object'; // use Array.isArray or Object.prototype.toString.call to differentiate regular objects from arrays
-> typeof new Date() === 'object';
+```javascript
+typeof {a:1} === 'object';
+typeof [1, 2, 4] === 'object'; // use Array.isArray or Object.prototype.toString.call to differentiate regular objects from arrays
+typeof new Date() === 'object';
+```
 Funções
-> typeof function(){} === 'function';
-> typeof Math.sin === 'function';
+```javascript
+typeof function(){} === 'function';
+typeof Math.sin === 'function';
+```
 Operadores Unários
 Todos os operadores que vimos operavam em dois valores, mas > typeof espera um único valor. Operadores que usam dois valores são chamados de operadores binários, enquanto que aqueles que recebem apenas um, são chamados de operadores unários. O operador - “negativo”pode ser usado tanto como binário quanto como unário.
 > console.log(- (10 - 2))
