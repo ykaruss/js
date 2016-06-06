@@ -365,5 +365,50 @@ switch (prompt("What is the weather like?")) {
 ```
 
 ##Comentários
-//
-/* e */
+//  
+/* e */  
+
+##Função
+```javascript
+var square = function(x) {
+  return x * x;
+};
+
+var makeNoise = function() {
+  console.log("Pling!");
+};
+makeNoise();
+
+var power = function(base, exponent) {
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+    result *= base;
+  return result;
+};
+console.log(power(2, 10));
+```
+A palavra-chave return sem uma expressão após, irá fazer com que o retorno da função seja undefined.
+
+##Parâmetros e Escopos
+
+Os parâmetros de uma função comportam-se como variáveis regulares. Seu valor inicial é informado por quem invocou a função e não pelo código da função em si.
+
+Uma propriedade importante das funções é que variáveis definidas dentro do "corpo" delas, incluindo seus parâmetros, são locais à própria função. Isso significa, por exemplo, que a variável result no exemplo power será criada novamente toda vez que a função for invocada, sendo que as diferentes execuções não interferem umas nas outras.
+
+Essa característica de localidade das variáveis se aplica somente aos parâmetros e às variáveis que forem declaradas usando a palavra-chave var dentro do "corpo" de uma função. Variáveis declaradas fora do contexto de alguma função são chamadas de globais (não locais), pois elas são visíveis em qualquer parte da aplicação. É possível acessar variáveis globais dentro de qualquer função, contanto que você não tenha declarado uma variável local com o mesmo nome.
+```javascript
+var x = "outside";
+var f1 = function() {
+  var x = "inside f1";
+};
+f1();
+console.log(x);
+
+var f2 = function() {
+  x = "inside f2";
+};
+f2();
+console.log(x);
+```
+
+
