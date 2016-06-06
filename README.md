@@ -365,8 +365,8 @@ switch (prompt("What is the weather like?")) {
 ```
 
 ##Comentários
-//  
-/* e */  
+// linha  
+/* e */ bloco 
 
 ##Função
 ```javascript
