@@ -130,8 +130,6 @@ Nem todos os operadores são símbolos, sendo que alguns são escritos como pala
 console.log(typeof 4.5)
 console.log(typeof "x")
 ```
-
-##Operadores Lógicos  
 Existem também operadores que podem ser aplicados aos valores Booleanos. O JavaScript dá suporte a três operadores lógicos: and, or e not, que podem ser traduzidos para o português como e, ou e não. Eles podem ser usados para "pensar" de forma lógica sobre Booleanos.  
 O operador && representa o valor lógico and ou, em português, e. Ele é um operador binário, e seu resultado é apenas verdadeiro se ambos os valores dados à ele forem verdadeiros.  
 ```javascript
