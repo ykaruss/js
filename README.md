@@ -1,9 +1,9 @@
 #JavaScript
 
-Multi-paradigma: com base em protótipo funcional, imperativo e scripts  
-Criado: Brendan Eich  
-Estilo de tipagem: Dinâmica, fraca e implícita
-O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
+* Multi-paradigma: com base em protótipo funcional, imperativo e scripts  
+* Criado: Brendan Eich  
+* Estilo de tipagem: Dinâmica, fraca e implícita
+* O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
 * O lado cliente do JavaScript fornece objetos para controlar um navegador web e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que uma aplicação coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e de navegação da página.  
 * O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
 
@@ -19,51 +19,65 @@ Nodejs - https://nodejs.org/en/
 * Expressões podem ser encadeadas de forma semelhante às subfrases usadas na linguagem humana - uma subfrase pode conter sua própria subfrase, e assim por diante. Isto nos permite combinar expressões para expressar computações complexas arbitrariamente.
 * Se uma expressão corresponde a um fragmento de sentença, uma afirmação, no JavaScript, corresponde a uma frase completa em linguagem humana. Um programa é simplesmente uma lista de afirmações.
 * O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
+```javascript
 ;
 1;
 !false;
+```
 
 #Ponto e vírgula
 Em alguns casos, o JavaScript permite que você omita o ponto e vírgula no fim de uma declaração. Em outros casos ele deve estar lá ou coisas estranhas irão acontecer. As regras para quando ele pode ser seguramente omitido são um pouco complexas e propensas a erro.
 
 #Palavras-chave e Palavras Reservadas
+```javascript
 break case catch continue debugger default delete do else false finally for function if implements in instanceof interface let new null package private protected public return static switch throw true try typeof var void while with yield this
+```
 
 #Variáveis
-Não permite criar variáveis com nomes reservados;
-Usa a palavra reservada var;
-> var soma = 5+5;
-> console.log(soma);
-> soma+=++soma;
-> console.log(soma);
-
+Não permite criar variáveis com nomes reservados  
+Usa a palavra reservada var  
+```javascript
+var soma = 5+5;
+console.log(soma);
+soma+=++soma;
+console.log(soma);
+```
 #Ambiente
 A coleção de variáveis e seus valores que existem em um determinado tempo é chamado de environment (ambiente).  
 Quando um programa inicia, o ambiente não está vazio. Ele irá conter no mínimo o número de variáveis que fazem parte do padrão da linguagem. E na maioria das vezes haverá um conjunto adicional de variáveis que fornecem maneiras de interagir com o sistema envolvido.  
 Por exemplo, em um navegador, existem variáveis que apontam para funcionalidades que permitem a você inspecionar e influenciar no atual carregamento do website, e ler a entrada do mouse e teclado da pessoa que está usando o navegador.
-Valores, Tipos e Operadores  
 
+#Valores, Tipos e Operadores  
 Existem seis tipos básicos de valores no JavaScript:  
-+Número
-+String
-+Booleans 
-+Undefined 
-+Objetos
-+Funções
-+Números
++Número  
++String  
++Booleans  
++Undefined  
++Objetos  
++Funções  
++Números  
 
-> typeof 37 === 'number';
-> typeof 3.14 === 'number';
-> typeof Math.LN2 === 'number';
-> typeof Infinity === 'number'; 
+```javascript
+typeof 37 === 'number';
+typeof 3.14 === 'number';
+typeof Math.LN2 === 'number';
+typeof Infinity === 'number'; 
+```
+
 Infinity e -Infinity, que são usados para representar os infinitos positivo e negativo. O cálculo Infinity - 1 continua sendo Infinity, assim como qualquer outra variação dessa conta. Entretanto, não confie muito em cálculos baseados no valor infinito, pois esse valor não é matematicamente sólido, e rapidamente nos levará ao próximo número especial: NaN.
-Números
+Números  
+```javascript
+typeof NaN === 'number'; 
+```
 
-> typeof NaN === 'number'; 
-NaN é a abreviação de “not a number” (não é um número), mesmo sabendo que ele é um valor do tipo número. Você receberá esse valor como resultado quando, por exemplo, tentar calcular 0 / 0 (zero dividido por zero), Infinity - Infinity ou, então, realizar quaisquer outras operações numéricas que não resultem em um número preciso e significativo.
-> typeof Number(1) === 'number'; 
+NaN é a abreviação de “not a number” (não é um número), mesmo sabendo que ele é um valor do tipo número. Você receberá esse valor como resultado quando, por exemplo, tentar calcular 0 / 0 (zero dividido por zero), Infinity - Infinity ou, então, realizar quaisquer outras operações numéricas que não resultem em um número preciso e significativo.  
+
+```javascript
+typeof Number(1) === 'number'; 
 // but never use this form!
-NaN é supostamente usado para indicar o resultado de alguma operação que não tenha sentido e, por isso, ele não será igual ao resultado de quaisquer outras operações sem sentido.
+```
+
+NaN é supostamente usado para indicar o resultado de alguma operação que não tenha sentido e, por isso, ele não será igual ao resultado de quaisquer outras operações sem sentido.  
 Strings
 > typeof "" === 'string';
 > typeof "bla" === 'string';
