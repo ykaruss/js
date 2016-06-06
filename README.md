@@ -143,7 +143,7 @@ console.log(false || false)
 ```
 Not, em português não, é escrito usando um ponto de exclamação (!). Ele é um operador unário que inverte o valor que é dado à ele. Por exemplo, !true produz false e !false produz true.  
 ```javascript
-console.log(!0); // ZERO é false O.o
+console.log(!0);
 console.log(!5);
 console.log(!"teste");
 console.log("teste");
@@ -276,13 +276,13 @@ alert("Large");
 ```
 
 ##Loops While e Do
-console.log(0);
-console.log(2);
-console.log(4);
-console.log(6);
-console.log(8);
-console.log(10);
-console.log(12);
+console.log(0);  
+console.log(2);  
+console.log(4);  
+console.log(6);  
+console.log(8);  
+console.log(10);  
+console.log(12);  
 
 ```javascript
 var number = 0;
