@@ -8,8 +8,8 @@
 * O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
 
 #Referências
-https://github.com/braziljs/eloquente-javascript  
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
+Eloquente JavaScript - https://github.com/braziljs/eloquente-javascript  
+Guia JavaScript - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
 
 #Ferramentas
 Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
