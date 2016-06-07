@@ -30,45 +30,45 @@ Em alguns casos, o JavaScript permite que você omita o ponto e vírgula no fim 
 
 #Palavras-chave e Palavras Reservadas
 ```javascript
-+ break
-+ case
-+ catch
-+ continue
-+ const
-+ debugger
-+ default
-+ delete
-+ do
-+ else
-+ false
-+ finally
-+ for
-+ function
-+ if
-+ implements
-+ in
-+ instanceof
-+ interface
-+ let
-+ new
-+ null
-+ package
-+ private
-+ protected
-+ public
-+ return
-+ static
-+ switch
-+ throw
-+ true
-+ try
-+ typeof
-+ this
-+ var
-+ void
-+ while
-+ with
-+ yield
++break
++case
++catch
++continue
++const
++debugger
++default
++delete
++do
++else
++false
++finally
++for
++function
++if
++implements
++in
++instanceof
++interface
++let
++new
++null
++package
++private
++protected
++public
++return
++static
++switch
++throw
++true
++try
++typeof
++this
++var
++void
++while
++with
++yield
 ```
 
 #Variáveis
