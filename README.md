@@ -29,7 +29,6 @@ Nodejs - https://nodejs.org/en/
 Em alguns casos, o JavaScript permite que você omita o ponto e vírgula no fim de uma declaração. Em outros casos ele deve estar lá ou coisas estranhas irão acontecer. As regras para quando ele pode ser seguramente omitido são um pouco complexas e propensas a erro.
 
 #Palavras-chave e Palavras Reservadas
-```javascript
 - break
 - case
 - catch
@@ -69,7 +68,6 @@ Em alguns casos, o JavaScript permite que você omita o ponto e vírgula no fim 
 - while
 - with
 - yield
-```
 
 #Variáveis
 Não permite criar variáveis com nomes reservados  
