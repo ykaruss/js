@@ -87,12 +87,12 @@ Por exemplo, em um navegador, existem variáveis que apontam para funcionalidade
 
 #Valores, Tipos e Operadores  
 Existem seis tipos básicos de valores no JavaScript:  
-*Número  
-*String  
-*Booleans  
-*Undefined  
-*Objetos  
-*Funções  
+- Número  
+- String  
+- Booleans  
+- Undefined  
+- Objetos  
+- Funções  
 
 ##Números  
 ```javascript
