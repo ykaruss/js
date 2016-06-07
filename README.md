@@ -8,8 +8,8 @@
 * O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
 
 #Referências
-https://github.com/braziljs/eloquente-javascript  
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
+Eloquente JavaScript - https://github.com/braziljs/eloquente-javascript  
+Guia JavaScript - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
 
 #Ferramentas
 Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
@@ -29,9 +29,45 @@ Nodejs - https://nodejs.org/en/
 Em alguns casos, o JavaScript permite que você omita o ponto e vírgula no fim de uma declaração. Em outros casos ele deve estar lá ou coisas estranhas irão acontecer. As regras para quando ele pode ser seguramente omitido são um pouco complexas e propensas a erro.
 
 #Palavras-chave e Palavras Reservadas
-```javascript
-break case catch continue debugger default delete do else false finally for function if implements in instanceof interface let new null package private protected public return static switch throw true try typeof var void while with yield this
-```
+- break
+- case
+- catch
+- continue
+- const
+- debugger
+- default
+- delete
+- do
+- else
+- false
+- finally
+- for
+- function
+- if
+- implements
+- in
+- instanceof
+- interface
+- let
+- new
+- null
+- package
+- private
+- protected
+- public
+- return
+- static
+- switch
+- throw
+- true
+- try
+- typeof
+- this
+- var
+- void
+- while
+- with
+- yield
 
 #Variáveis
 Não permite criar variáveis com nomes reservados  
@@ -49,12 +85,12 @@ Por exemplo, em um navegador, existem variáveis que apontam para funcionalidade
 
 #Valores, Tipos e Operadores  
 Existem seis tipos básicos de valores no JavaScript:  
-*Número  
-*String  
-*Booleans  
-*Undefined  
-*Objetos  
-*Funções  
+- Número  
+- String  
+- Booleans  
+- Undefined  
+- Objetos  
+- Funções  
 
 ##Números  
 ```javascript
