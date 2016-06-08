@@ -399,13 +399,15 @@ switch (prompt("What is the weather like?")) {
 
 ##Comentários
 // linha  
-/* e */ bloco 
+/* e 
+bloco */ 
 
 ##Função
 ```javascript
 var square = function(x) {
-  return x * x;
+  return Math.pow(x,2)
 };
+square(2);
 
 var makeNoise = function() {
   console.log("Pling!");
