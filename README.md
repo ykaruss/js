@@ -205,23 +205,20 @@ Esse operador é chamado de operador condicional (algumas vezes é chamado apena
 Existem dois valores especiais, null e undefined, que são usados para indicar a ausência de um valor com significado. Eles são valores por si sós, mas não carregam nenhum tipo de informação.  
 Muitas operações na linguagem que não produzem um valor com significado retornarão undefined simplesmente porque eles precisam retornar algum valor.  
 A diferença de significado entre undefined e null é um acidente que foi criado no design do JavaScript, e não faz muita diferença na maioria das vezes. Nos casos em que você deve realmente se preocupar com esses valores, recomendo tratá-los como valores idênticos.  
-Conversão Automática de Tipo  
+
+##Conversão Automática de Tipo  
 JavaScript tentar fazer o seu melhor para aceitar quase todos os programas que você fornecer, inclusive aqueles que fazem coisas bem estranhas. Isso pode ser demonstrado com as seguintes expressões:  
 ```javascript
 console.log(false == 0)
 ```
 Quando um operador é aplicado a um tipo de valor “errado”, o JavaScript converterá, de forma silenciosa, esse valor para o tipo que ele desejar, usando uma série de regras que muitas vezes não é o que você deseja ou espera.  
 Esse comportamento é chamado de coerção de tipo (ou conversão de tipo).  
-
-##Conversão Automática de Tipo
 ```javascript
 console.log(8 * null)
 console.log("5" - 1)
 console.log("5" + 1)
 ```
 Na primeira expressão, null se torna 0 e, na segunda, a string "5" se torna o número 5. Já na terceira expressão, o operador + tenta efetuar uma concatenação de string antes de tentar executar a adição numérica e, por isso, o número 1 é convertido para a string "1".
-
-##Conversão Automática de Tipo  
 Quando algo que não pode ser mapeado como um número de forma óbvia (tais como "five" ou undefined) é convertido para um número, o valor NaN é produzido.  
 Quaisquer outras operações aritméticas realizadas com NaN continuam produzindo NaN, portanto, quando você perceber que está recebendo esse valor em algum lugar inesperado, procure por conversões acidentais de tipo.  
 ```javascript
