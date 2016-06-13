@@ -99,7 +99,7 @@ typeof 3.14 === 'number';
 typeof Math.LN2 === 'number';
 typeof Infinity === 'number'; 
 ```
-Infinity e -Infinity, que são usados para representar os infinitos positivo e negativo. O cálculo Infinity - 1 continua sendo Infinity, assim como qualquer outra variação dessa conta. Entretanto, não confie muito em cálculos baseados no valor infinito, pois esse valor não é matematicamente sólido, e rapidamente nos levará ao próximo número especial: NaN.
+Infinity e -Infinity, representam os infinitos positivo e negativo. O cálculo Infinity - 1 continua sendo Infinity, assim como qualquer outra variação dessa conta. Entretanto, não confie muito em cálculos baseados no valor infinito, pois esse valor não é matematicamente sólido, e rapidamente nos levará ao próximo número especial: NaN.
 ```javascript
 typeof NaN === 'number';
 typeof Number(1) === 'number'; 
@@ -157,7 +157,7 @@ typeof Math.sin === 'function';
 ```
 
 ##Operadores Unários  
-Todos os operadores que vimos operavam em dois valores, mas > typeof espera um único valor. Operadores que usam dois valores são chamados de operadores binários, enquanto que aqueles que recebem apenas um, são chamados de operadores unários. O operador - “negativo”pode ser usado tanto como binário quanto como unário.  
+Todos os operadores que vimos operavam em dois valores, mas typeof espera um único valor. Operadores que usam dois valores são chamados de operadores binários, enquanto que aqueles que recebem apenas um, são chamados de operadores unários. O operador - “negativo”pode ser usado tanto como binário quanto como unário.  
 ```javascript
 console.log(- (10 - 2))
 ```
@@ -309,28 +309,18 @@ alert("Large");
 ```
 
 ##Loops While, Do While, for
-console.log(0);  
-console.log(2);  
-console.log(4);  
-console.log(6);  
-console.log(8);  
-console.log(10);  
-console.log(12);  
-
 ```javascript
 var number = 0;
 while (number <= 12) {
  console.log(number);
  number += 2;
 }
-```
-```javascript
+
 do {
 var name = prompt("Who are you?");
 } while (!name);
 console.log(name);
-```
-```javascript
+
 var pin = Number(prompt("Qnts PIN?"));
 for (var n = 1; n <= pin; n++) {
 var output = "";
@@ -338,12 +328,10 @@ if (n % 3 == 0)
 output += "Pin";
 Console.log(output);
 };
-```
-```javascript
+
 for (var line = "#"; line.length < 8; line += "#")
 console.log(line);
-```
-```javascript
+
 var size = 8, board = "";
 for (var y = 0; y < size; y++) {
   for (var x = 0; x < size; x++) {
@@ -444,6 +432,16 @@ var f2 = function() {
 };
 f2();
 console.log(x);
-```
 
+function power(base, exponent) {
+  if (exponent == undefined)
+    exponent = 2;
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+    result *= base;
+  return result;
+}
+console.log(power(4));
+console.log(power(4, 3));
+```
 
