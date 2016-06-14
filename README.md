@@ -4,74 +4,34 @@
 * Criado: Brendan Eich  
 * Estilo de tipagem: Dinâmica, fraca e implícita
 * O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
-* O lado cliente do JavaScript fornece objetos para controlar um navegador web e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que uma aplicação coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e de navegação da página.  
-* O lado do servidor do JavaScript estende-se do núcleo  da linguagem, fornecendo objetos relevantes à execução do JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que uma aplicação comunica-se com um banco de dados, garantindo a continuidade de informações de uma chamada para a outra da aplicação, ou executar manipulações de arquivos em um servidor.  
+* O lado cliente: Document Object Model (DOM).
+* O lado do servidor: Nodejs.
 
 #Referências
 Eloquente JavaScript - https://github.com/braziljs/eloquente-javascript  
 Guia JavaScript - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide
+NinjaJS -h ttps://www.manning.com/books/secrets-of-the-javascript-ninja
 
 #Ferramentas
+Firefox Developer Editor - https://www.mozilla.org/pt-BR/firefox/developer/
 Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
-Nodejs - https://nodejs.org/en/  
+Nodejs - https://nodejs.org/en/ 
+JSBIN - http://jsbin.com/?html,console,output
 
 #Expressão e Afirmação
-* Expressões podem ser encadeadas de forma semelhante às subfrases usadas na linguagem humana - uma subfrase pode conter sua própria subfrase, e assim por diante. Isto nos permite combinar expressões para expressar computações complexas arbitrariamente.
-* Se uma expressão corresponde a um fragmento de sentença, uma afirmação, no JavaScript, corresponde a uma frase completa em linguagem humana. Um programa é simplesmente uma lista de afirmações.
-* O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
+* expressão = sentença(...afirmação); <- Ponto e vírgula
+* * O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
 ```javascript
 ;
 1;
 !false;
 ```
 
-#Ponto e vírgula
-Em alguns casos, o JavaScript permite que você omita o ponto e vírgula no fim de uma declaração. Em outros casos ele deve estar lá ou coisas estranhas irão acontecer. As regras para quando ele pode ser seguramente omitido são um pouco complexas e propensas a erro.
-
 #Palavras-chave e Palavras Reservadas
-- break
-- case
-- catch
-- continue
-- const
-- debugger
-- default
-- delete
-- do
-- else
-- false
-- finally
-- for
-- function
-- if
-- implements
-- in
-- instanceof
-- interface
-- let
-- new
-- null
-- package
-- private
-- protected
-- public
-- return
-- static
-- switch
-- throw
-- true
-- try
-- typeof
-- this
-- var
-- void
-- while
-- with
-- yield
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
 
 #Variáveis
-Não permite criar variáveis com nomes reservados  
-Usa a palavra reservada var  
+Usa a palavra reservada var, Não permite nomes reservados.   
 ```javascript
 var soma = 5+5;
 console.log(soma);
@@ -99,13 +59,12 @@ typeof 3.14 === 'number';
 typeof Math.LN2 === 'number';
 typeof Infinity === 'number'; 
 ```
-Infinity e -Infinity, representam os infinitos positivo e negativo. O cálculo Infinity - 1 continua sendo Infinity, assim como qualquer outra variação dessa conta. Entretanto, não confie muito em cálculos baseados no valor infinito, pois esse valor não é matematicamente sólido, e rapidamente nos levará ao próximo número especial: NaN.
+Infinity e -Infinity, representam os infinitos positivo e negativo. 
 ```javascript
 typeof NaN === 'number';
 typeof Number(1) === 'number'; 
 ```
-NaN é a abreviação de “not a number” (não é um número), mesmo sabendo que ele é um valor do tipo número. Você receberá esse valor como resultado quando, por exemplo, tentar calcular 0 / 0 (zero dividido por zero), Infinity - Infinity ou, então, realizar quaisquer outras operações numéricas que não resultem em um número preciso e significativo.  
-NaN é supostamente usado para indicar o resultado de alguma operação que não tenha sentido e, por isso, ele não será igual ao resultado de quaisquer outras operações sem sentido.  
+NaN = “not a number” //(não é um número), mesmo sabendo que ele é um valor do tipo número. calcular 0 / 0 (zero dividido por zero), Infinity - Infinity;
 
 ##Strings
 ```javascript
@@ -114,7 +73,6 @@ typeof "bla" === 'string';
 typeof (typeof 1) === 'string'; 
 typeof always return a string
 typeof String("abc") === 'string'; 
-but never use this form!
 typeof String("This is the first line\nAnd this is the second") === 'string';
 typeof String("con" + "cat" + "e" + "nate") === 'string';
 ```
@@ -125,14 +83,12 @@ typeof true === 'boolean';
 typeof false === 'boolean';
 typeof Boolean(true) === 'boolean'; 
 ```
-Valores Booleanos
+
+##Valores Booleanos  
 ```javascript
 console.log(3 > 2)
 console.log(3 < 2)
 console.log("Aardvark" < "Zoroaster")
-```
-A forma na qual as strings são ordenadas é mais ou menos alfabética. Letras maiúsculas serão sempre “menores” que as minúsculas, portanto, “Z” < “a” é verdadeiro. Além disso, caracteres não alfabéticos (!, -, e assim por diante) também são incluídos nessa ordenação. A comparação de fato, é baseada no padrão Unicode, o JavaScript inicia da esquerda para a direita, comparando os códigos numéricos dos caracteres um por um.  
-```javascript
 console.log("Itchy" != "Scratchy")
 console.log(NaN == NaN)
 ```
@@ -140,13 +96,13 @@ console.log(NaN == NaN)
 ##Undefined  
 ```javascript
 typeof undefined === 'undefined';
-typeof blabla === 'undefined'; // an undefined variable
+typeof blabla === 'undefined';
 ```
 
 ##Objetos  
 ```javascript
 typeof {a:1} === 'object';
-typeof [1, 2, 4] === 'object'; // use Array.isArray or Object.prototype.toString.call to differentiate regular objects from arrays
+typeof [1, 2, 4] === 'object'; //https://developer.mozilla.org/pt-BR/docs/Glossario/array
 typeof new Date() === 'object';
 ```
 
@@ -157,28 +113,18 @@ typeof Math.sin === 'function';
 ```
 
 ##Operadores Unários  
-Todos os operadores que vimos operavam em dois valores, mas typeof espera um único valor. Operadores que usam dois valores são chamados de operadores binários, enquanto que aqueles que recebem apenas um, são chamados de operadores unários. O operador - “negativo”pode ser usado tanto como binário quanto como unário.  
 ```javascript
-console.log(- (10 - 2))
-```
-Nem todos os operadores são símbolos, sendo que alguns são escritos como palavras. Um exemplo é o operador > typeof, que produz um valor do tipo string contendo o nome do tipo do valor que você está verificando.  
-```javascript
+console.log(-(10 - 2));
 console.log(typeof 4.5)
 console.log(typeof "x")
 ```
-Existem também operadores que podem ser aplicados aos valores Booleanos. O JavaScript dá suporte a três operadores lógicos: and, or e not, que podem ser traduzidos para o português como e, ou e não. Eles podem ser usados para "pensar" de forma lógica sobre Booleanos.  
-O operador && representa o valor lógico and ou, em português, e. Ele é um operador binário, e seu resultado é apenas verdadeiro se ambos os valores dados à ele forem verdadeiros.  
+
+##Operadores lógicos  
 ```javascript
 console.log(true && false)
 console.log(true && true)
-```
-O operador || indica o valor lógico or ou, em português, ou. Ele produz um valor verdadeiro se qualquer um dos valores dados à ele for verdadeiro.  
-```javascript
 console.log(false || true)
 console.log(false || false)
-```
-Not, em português não, é escrito usando um ponto de exclamação (!). Ele é um operador unário que inverte o valor que é dado à ele. Por exemplo, !true produz false e !false produz true.  
-```javascript
 console.log(!0);
 console.log(!5);
 console.log(!"teste");
@@ -187,8 +133,7 @@ console.log(!!"teste");
 ```
 
 ##Prioridade de operadores   
-Quando misturamos esses operadores Booleanos com operadores aritméticos e outros tipos de operadores, nem sempre é óbvio quando devemos usar ou não os parênteses.  
-Na prática, você normalmente não terá problemas sabendo que, dos operadores que vimos até agora, || possui a menor precedência, depois vem o operador &&, em seguida vêm os operadores de comparação (>, ==, etc) e, por último, quaisquer outros operadores. Essa ordem foi escolhida de tal forma que, em expressões típicas como o exemplo a seguir, poucos parênteses são realmente necessários:  
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 ```javascript
 console.log(1 + 1 == 2 && 10 * 10 > 50);
 ```
@@ -199,41 +144,22 @@ Ele é escrito usando um ponto de interrogação e dois pontos, como mostrado ab
 console.log(true ? 1 : 2);
 console.log(false ? 1 : 2);
 ```
-Esse operador é chamado de operador condicional (algumas vezes é chamado apenas de operador ternário, já que é o único operador desse tipo na linguagem). O valor presente à esquerda do ponto de interrogação “seleciona” qual dos outros dois valores será retornado. Quando ele for verdadeiro, o valor do meio é escolhido e, quando for falso, o valor à direita é retornado.  
 
 ##Valores Indefinidos  
-Existem dois valores especiais, null e undefined, que são usados para indicar a ausência de um valor com significado. Eles são valores por si sós, mas não carregam nenhum tipo de informação.  
-Muitas operações na linguagem que não produzem um valor com significado retornarão undefined simplesmente porque eles precisam retornar algum valor.  
-A diferença de significado entre undefined e null é um acidente que foi criado no design do JavaScript, e não faz muita diferença na maioria das vezes. Nos casos em que você deve realmente se preocupar com esses valores, recomendo tratá-los como valores idênticos.  
-
-##Conversão Automática de Tipo  
-JavaScript tentar fazer o seu melhor para aceitar quase todos os programas que você fornecer, inclusive aqueles que fazem coisas bem estranhas. Isso pode ser demonstrado com as seguintes expressões:  
-```javascript
-console.log(false == 0)
-```
-Quando um operador é aplicado a um tipo de valor “errado”, o JavaScript converterá, de forma silenciosa, esse valor para o tipo que ele desejar, usando uma série de regras que muitas vezes não é o que você deseja ou espera.  
-Esse comportamento é chamado de coerção de tipo (ou conversão de tipo).  
-```javascript
-console.log(8 * null)
-console.log("5" - 1)
-console.log("5" + 1)
-```
-Na primeira expressão, null se torna 0 e, na segunda, a string "5" se torna o número 5. Já na terceira expressão, o operador + tenta efetuar uma concatenação de string antes de tentar executar a adição numérica e, por isso, o número 1 é convertido para a string "1".
-Quando algo que não pode ser mapeado como um número de forma óbvia (tais como "five" ou undefined) é convertido para um número, o valor NaN é produzido.  
-Quaisquer outras operações aritméticas realizadas com NaN continuam produzindo NaN, portanto, quando você perceber que está recebendo esse valor em algum lugar inesperado, procure por conversões acidentais de tipo.  
-```javascript
-console.log("five" * 2)
-```
-Quando comparamos valores do mesmo tipo usando o operador ==, o resultado é fácil de se prever: você receberá verdadeiro quando ambos os valores forem o mesmo, exceto no caso de NaN.  
-Por outro lado, quando os tipos forem diferentes, o JavaScript usa um conjunto de regras complicadas e confusas para determinar o que fazer, sendo que, na maioria dos casos, ele tenta apenas converter um dos valores para o mesmo tipo do outro valor. Entretanto, quando null ou undefined aparece em algum dos lados do operador, será produzido verdadeiro apenas se ambos os lados forem null ou undefined.  
+- null  
+- undefined  
 ```javascript
 console.log(null == undefined);
-console.log(null == 0);
 ```
-O último exemplo é um comportamento que normalmente é bastante útil. Quando quiser testar se um valor possui um valor real ao invés de null ou undefined, você pode simplesmente compará-lo a null com o operador == (ou !=).  
-Mas e se você quiser testar se algo se refere ao valor preciso false? As regras de conversão de strings e números para valores booleanos afirmam que 0, NaN e empty strings contam como false, enquanto todos os outros valores contam como true.  
-Por causa disso, expressões como 0 == false e "" == false retornam true.  
-Para casos assim, onde você não quer qualquer conversão automática de tipos acontecendo, existem dois tipos extras de operadores: === e !==.  
+
+##Conversão Automática de Tipo  
+```javascript
+console.log(8 * null) // 0
+console.log("5" - 1) // 4
+console.log("5" + 1) //51 
+console.log("five" * 2) //NaN
+```
+##Operadores: === e !==.  ---PAREI AQUI--
 O primeiro teste se o valor é precisamente igual ao outro, e o segundo testa se ele não é precisamente igual. Então "" === false é falso como esperado.  
 É recomendo usar os operadores de comparação de três caracteres defensivamente, para prevenir inesperadas conversões de tipo que o farão tropeçar.  
 Mas quando você tem certeza de que os tipos de ambos os lados serão iguais, ou que eles vão ser ambos null/undefined, não há problemas em usar os operadores curtos.  
@@ -444,4 +370,5 @@ function power(base, exponent) {
 console.log(power(4));
 console.log(power(4, 3));
 ```
+callback
 
