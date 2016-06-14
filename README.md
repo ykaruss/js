@@ -15,7 +15,7 @@ NinjaJS -h ttps://www.manning.com/books/secrets-of-the-javascript-ninja
 #Ferramentas
 Firefox Developer Editor - https://www.mozilla.org/pt-BR/firefox/developer/  
 Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
-Nodejs - https://nodejs.org/en/ 
+Nodejs - https://nodejs.org/en/  
 JSBIN - http://jsbin.com/?html,console,output  
 
 #Expressão e Afirmação
