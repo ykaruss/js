@@ -159,25 +159,26 @@ console.log("5" - 1) // 4
 console.log("5" + 1) //51 
 console.log("five" * 2) //NaN
 ```
-##Operadores: === e !==.  ---PAREI AQUI--
-O primeiro teste se o valor é precisamente igual ao outro, e o segundo testa se ele não é precisamente igual. Então "" === false é falso como esperado.  
-É recomendo usar os operadores de comparação de três caracteres defensivamente, para prevenir inesperadas conversões de tipo que o farão tropeçar.  
-Mas quando você tem certeza de que os tipos de ambos os lados serão iguais, ou que eles vão ser ambos null/undefined, não há problemas em usar os operadores curtos.  
+##Operadores: === e !==
+Testa se o valor é precisamente igual (ou não) ao outro.  
+É recomendo usar para prevenir inesperadas conversões de tipo que o farão tropeçar.  
+Para null e undefined, não há problemas em usar os operadores curtos.  
 
 ##O Curto-Circuito de && e ||  
-Os operadores lógicos && e || tem uma maneira peculiar de lidar com valores de tipos diferentes. Eles vão converter o valor à sua esquerda para o tipo booleano a fim de decidir o que fazer, mas então, dependendo do operador e do resultado da conversão, eles ou retornam o valor à esquerda original, ou o valor à direita.  
-O operador || vai retornar o valor à sua esquerda quando ele puder ser convertido em true, ou valor à sua direita caso contrário. Ele faz a coisa certa para valores booleanos, e vai fazer algo análogo para valores de outros tipos. Isso é muito útil, pois permite que o operador seja usado para voltar um determinado valor predefinido.  
+|| Se o parâmetro da esquerda for true, esse seré retornado, senão retorna o segundo parâmetro.  
+&& Se o parâmetro da esquerda for false, esse seré retornado, senão retorna o segundo parâmetro.  
 ```javascript
 console.log(null || "user")
 console.log("Karl" || "user")
+console.log(0 && true) 
+console.log(" " && 1)
 ```
-O operador && trabalha similarmente, mas ao contrário. Quando o valor à sua esquerda é algo que se torne false, ele retorna o valor, e caso contrário ele retorna o valor à sua direita.  
-Outro importante propriedade destes 2 operadores é que a expressão a sua direita é avaliada somente quando necessário. No caso de true || X, não importa o que X é pode ser uma expressão que faça algo terrível o resultado vai ser verdadeiro, e X nunca é avaliado. O mesmo acontece para false && X, que é falso, e vai ignorar X.  
 
 ##Resumo
 Alguns valores são criados digitando seu nome (true, null) ou valores (13, "abc").  
-Eles podem ser combinados e transformados com operadores. Nós vimos operadores binários para aritmética (+, -, *, /, e %), um para concatenação de string (+), comparação (==, !=, ===, !==, <, >, <=, >=) e lógica (&&, ||), como também vários operadores unários - para negativar um número, ! para negar uma lógica, e typeof para encontrar o tipo do valor).  
-Isto lhe dá informação suficiente para usar o JavaScript como uma calculadora de bolso, mas não muito mais.  
+Eles podem ser combinados e transformados com operadores.  
+Nós vimos operadores binários para aritmética (+, -, *, /, e %), um para concatenação de string (+), comparação (==, !=, ===, !==, <, >, <=, >=) e lógica (&&, ||).  
+Vários operadores unários - para negativar um número, ! para negar uma lógica, e typeof para encontrar o tipo do valor).  
 
 ##Chamada de funções
 Muitos dos valores fornecidos no ambiente padrão são do tipo function (função). 
@@ -187,8 +188,8 @@ alert("Good morning!");
 ```
 
 ##Retornando Valores
-Muitas funções são úteis por causa dos efeitos que elas produzem. 
-É também possível para uma função produzir um valor, no caso de não ser necessário um efeito colateral. Por exemplo, temos a função Math.max, que pega dois números e retorna o maior entre eles:
+Muitas funções são úteis por causa dos efeitos que elas produzem.  
+Por exemplo, temos a função Math.max, que pega dois números e retorna o maior entre eles:  
 ```javascript
 console.log(Math.min(2, 4) + 100);
 ```
@@ -201,7 +202,9 @@ Retorn um true caso OK ou false caso Cancel
 ```javascript
 prompt(“Qual o seu nome?”, “Entre com seu nome aqui!!!”); 
 ```
-prompt pode ser usado para criar uma questão "aberta". O primeiro argumento é a questão; o segundo é o texto que o usuário inicia. Uma linha do texto pode ser escrita dentro da janela de diálogo, e a função vai retornar isso como uma string.
+O primeiro argumento é a questão.  
+O segundo é o texto que o usuário inicia.  
+Uma linha do texto pode ser escrita dentro da janela de diálogo. Retornar isso como uma string.  
 
 ##Fluxo de Controle
 ```javascript
@@ -227,11 +230,11 @@ else
 ```javascript
 var num = Number(prompt("Pick a number", "0"));
 if (num < 10)
-alert("Small");
+ alert("Small");
 else if (num < 100)
-alert("Medium");
+ alert("Medium");
 else
-alert("Large");
+ alert("Large");
 ```
 
 ##Loops While, Do While, for
@@ -241,23 +244,27 @@ while (number <= 12) {
  console.log(number);
  number += 2;
 }
-
+```
+```javascript
 do {
-var name = prompt("Who are you?");
+ var name = prompt("Who are you?");
 } while (!name);
 console.log(name);
-
+```
+```javascript
 var pin = Number(prompt("Qnts PIN?"));
 for (var n = 1; n <= pin; n++) {
-var output = "";
+ var output = "";
 if (n % 3 == 0)
-output += "Pin";
+ output += "Pin";
 Console.log(output);
 };
-
+```
+```javascript
 for (var line = "#"; line.length < 8; line += "#")
 console.log(line);
-
+```
+```javascript
 var size = 8, board = "";
 for (var y = 0; y < size; y++) {
   for (var x = 0; x < size; x++) {
@@ -272,24 +279,21 @@ console.log(board);
 ```
 
 ##Indentando Código
-O papel da indentação dentro dos blocos é fazer com que a estrutura do código se destaque. Em códigos complexos, onde temos blocos dentro de blocos, pode se tornar extremamente difícil distinguir onde um bloco começa e o outro termina.  
+O papel da indentação é que a estrutura do código se destaque.  
+Em códigos complexos, onde temos blocos dentro de blocos, pode se tornar extremamente difícil distinguir onde um bloco começa e o outro termina.  
 Com a indentação adequada, o formato visual do programa corresponde ao formato dos blocos contidos nele.  
 
 ##Quebrando a execução de um Loop
-Ter uma condição que produza um resultado false não é a única maneira que um loop pode parar. Existe uma declaração especial chamada break que tem o efeito de parar a execução e sair do loop em questão.
 ```javascript
 for (var current = 20; ; current++) {
-  if (current % 7 == 0)
-    break;
+  if (current % 7 == 0) //o operador resto (%) é uma maneira fácil de testar se um número é divisível por outro.
+    break;//quebra da iteração
 }
 console.log(current);
 ```
-Usar o operador resto (%) é uma maneira fácil de testar se um número é divisível por outro. Se for, o resto da divisão entre eles é zero.
-
-A palavra-chave continue é similar ao break, de modo que também influencia o progresso de um loop. Quando continue é encontrado no corpo de um loop, o controle de execução pula para fora do corpo e continua executando a próxima iteração do loop.
 ```javascript
 for (i = 0; i < 10; i++) {
- if (i === 3) { continue; }
+ if (i === 3) { continue; } //incrementa o iterador
  console.log(i);
 }
 ```
@@ -336,7 +340,7 @@ var power = function(base, exponent) {
 };
 console.log(power(2, 10));
 ```
-A palavra-chave return sem uma expressão após, irá fazer com que o retorno da função seja undefined.
+return sem uma expressão após, irá retornar undefined.
 
 ##Parâmetros e Escopos
 
@@ -352,15 +356,15 @@ var f1 = function() {
 };
 f1();
 console.log(x);
-
 var f2 = function() {
   x = "inside f2";
 };
 f2();
 console.log(x);
-
+```
+```javascript
 function power(base, exponent) {
-  if (exponent == undefined)
+  if (exponent == undefined) //tratamento de parâmetros
     exponent = 2;
   var result = 1;
   for (var count = 0; count < exponent; count++)
