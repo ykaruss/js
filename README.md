@@ -429,7 +429,7 @@ document.documentMode - retorna o mode usado pelo navegador
 document.documentURI - retorna a  URI do documento  
 document.domain	- retorna o nome do dominio do servidor do documento  
 document.embeds -	retorna todos <embed> elementos  	
-document.forms -	retorna todos <form> elementos 	
+document.forms -	retornatodos<form>elementos 	
 document.head -	retorna o <head> elemento 	
 document.images -	retorna todos <img> elementos 	
 document.implementation -	retorna o DOM implementação 	
