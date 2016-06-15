@@ -427,7 +427,7 @@ document.doctype - retorna o tipo de documentos
 document.documentElement -	retorna o  elemento <html>   	
 document.documentMode - retorna o mode usado pelo navegador  
 document.documentURI - retorna a  URI do documento  
-document.domain 	- retorna o nome do dominio do servidor do documento  
+document.domain	- retorna o nome do dominio do servidor do documento  
 document.embeds -	retorna todos <embed> elementos  	
 document.forms -	retorna todos <form> elementos 	
 document.head -	retorna o <head> elemento 	
@@ -441,12 +441,4 @@ document.referrer -	retorna o URI de referencia
 document.scripts -	retorna todos <script> elementos 	
 document.strictErrorChecking -	retorna if error checking is enforced 	
 document.title -	retorna o <title> elemento 	
-document.URL 	retorna o completo URL do documento 	
-
-
-
-
-
-
-
-
+document.URL - retorna o completo URL do documento
