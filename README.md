@@ -394,3 +394,34 @@ Um método é uma ação que você pode fazer (como adicionar ou excluir um elem
  </body>
 </html>
 ```
+O objeto document representa a sua página web. getElementById é um método, enquanto InnerHTML é uma propriedade.  
+regra geral = document.element.property  
+
+#Encontrar elementos HTML  
+- document.getElementById( id ) - acha um elemento pelo id  
+- document.getElementsByTagName( name ) - acha uma elemento pelo nome  
+- document.getElementsByClassName( name ) - acha uma elemento pela class  
+
+#Mudando elementos HTML
+- element.innerHTML = novo conteúdo - altera o html interno de um elemento  
+- element.attribute = novo vamlor -  	altera o valor de uma atributo interno de um html  
+- element.setAttribute (attribute, value) 	- altera o atributo de um elemento html  
+- element.style.property = novo estilo - altera um estilo de um elemento html  
+
+#Adicionar e eliminar Elements  
+- document.createElement( element ) - Cria um novo elemento  
+- document.removeChild( element ) -	Remove um elemento  
+- document.appendChild( element ) -	Adiciona um novo elemento  
+- document.replaceChild( element ) -	Altera um elemento    
+- document.write( text ) 	- Escrever no fluxo de saída HTML  
+
+#Adicionando Eventos manipuladores  
+- document.getElementById( id ).onclick = function(){ code } 	- Adicionando código de manipulador de eventos para um evento onclick
+
+
+
+
+
+
+
+
