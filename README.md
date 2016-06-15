@@ -374,3 +374,23 @@ function power(base, exponent) {
 console.log(power(4));
 console.log(power(4, 3));
 ```
+#JavaScript HTML DOM
+
+Quando uma página é carregada, o navegador cria um Document Object Modelo da página.  
+JavaScript pode adicionar, alterar e remover todos os elementos e atributos HTML na página.  
+JavaScript pode mudar todos os estilos CSS na página.  
+Métodos HTML DOM são ações que podem ser executadas (em Elementos HTML).  
+No DOM, todos os elementos HTML são definidos como objetos.  
+A interface de programação são as propriedades e métodos de cada objeto.  
+A propriedade é um valor que você pode obter ou conjunto (como alterar o conteúdo de um elemento HTML).  
+Um método é uma ação que você pode fazer (como adicionar ou excluir um elemento HTML).  
+```html
+<html>
+ <body>
+  <p id="demo"></p>
+  <script>
+   document.getElementById("demo").innerHTML = "Hello World!";
+  </script>
+ </body>
+</html>
+```
