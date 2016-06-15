@@ -429,13 +429,13 @@ document.documentMode - retorna o mode usado pelo navegador
 document.documentURI - retorna a  URI do documento  
 document.domain	- retorna o nome do dominio do servidor do documento  
 document.embeds -	retorna todos <embed> elementos  	
-document.forms -	retornatodos<form>elementos 	
+document.forms -	retorna todos <form> elementos 	
 document.head -	retorna o <head> elemento 	
 document.images -	retorna todos <img> elementos 	
 document.implementation -	retorna o DOM implementação 	
 document.inputEncoding -	retorna o documento encoding (character set) 	
 document.lastModified -	retorna a data e tempo que o documento foi carregado   
-document.links -	retorna todos <area> e <a> elementos que tem um atributo href  
+document.links -	retorna todos <<area>> e <<a>> elementos que tem um atributo href  
 document.readyState -	retorna o (loading) status do documento 	
 document.referrer -	retorna o URI de referencia  	
 document.scripts -	retorna todos <script> elementos 	
