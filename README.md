@@ -418,6 +418,31 @@ regra geral = document.element.property
 #Adicionando Eventos manipuladores  
 - document.getElementById( id ).onclick = function(){ code } 	- Adicionando código de manipulador de eventos para um evento onclick
 
+#Encontrar objetos HTML
+document.anchors - retorna todos os elementos <a> que tem um atributo nome  
+document.baseURI	- retorna a URI  
+document.body -	retorna o elemento <body>   	
+document.cookie - retorna o cookie  
+document.doctype - retorna o tipo de documentos  
+document.documentElement -	retorna o  elemento <html>   	
+document.documentMode - retorna o mode usado pelo navegador  
+document.documentURI - retorna a  URI do documento  
+document.domain 	- retorna o nome do dominio do servidor do documento  
+document.embeds -	retorna todos <embed> elementos  	
+document.forms -	retorna todos <form> elementos 	
+document.head -	retorna o <head> elemento 	
+document.images -	retorna todos <img> elementos 	
+document.implementation -	retorna o DOM implementação 	
+document.inputEncoding -	retorna o documento encoding (character set) 	
+document.lastModified -	retorna a data e tempo que o documento foi carregado   
+document.links -	retorna todos <area> e <a> elementos que tem um atributo href  
+document.readyState -	retorna o (loading) status do documento 	
+document.referrer -	retorna o URI de referencia  	
+document.scripts -	retorna todos <script> elementos 	
+document.strictErrorChecking -	retorna if error checking is enforced 	
+document.title -	retorna o <title> elemento 	
+document.URL 	retorna o completo URL do documento 	
+
 
 
 
