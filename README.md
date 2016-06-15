@@ -165,8 +165,8 @@ Testa se o valor é precisamente igual (ou não) ao outro.
 Para null e undefined, não há problemas em usar os operadores curtos.  
 
 ##O Curto-Circuito de && e ||  
-|| Se o parâmetro da esquerda for true, esse seré retornado, senão retorna o segundo parâmetro.  
-&& Se o parâmetro da esquerda for false, esse seré retornado, senão retorna o segundo parâmetro.  
+|| Se o parâmetro da esquerda for true, esse seré retornado, senão retorna o parâmetro da direita.  
+&& Se o parâmetro da esquerda for false, esse seré retornado, senão retorna o parâmetro da direita.  
 ```javascript
 console.log(null || "user")
 console.log("Karl" || "user")
@@ -374,8 +374,3 @@ function power(base, exponent) {
 console.log(power(4));
 console.log(power(4, 3));
 ```
-
-
-http://www.w3schools.com/js/js_htmldom.asp
-
-
