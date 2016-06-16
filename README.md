@@ -1,25 +1,28 @@
 #JavaScript
 
-* Multi-paradigma: com base em protótipo, funcional, imperativo e scripts  
-* Criado: Brendan Eich  
-* Estilo de tipagem: Dinâmica, fraca e implícita
-* O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
-* O lado cliente: Document Object Model (DOM).
-* O lado do servidor: Nodejs.
+_Multi-paradigma:_ com base em protótipo, funcional, imperativo e scripts  
+_Criado:_ Brendan Eich  
+_Estilo de tipagem:_ Dinâmica, fraca e implícita 
+
+O núcleo do JavaScript pode ser estendido para uma variedade de propósitos, complementando assim a linguagem:
+
+_O lado cliente:_ Document Object Model (DOM).
+
+_O lado do servidor:_ Nodejs.
 
 #Referências
-Eloquente JavaScript - https://github.com/braziljs/eloquente-javascript  
-Guia JavaScript - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide  
-NinjaJS -h ttps://www.manning.com/books/secrets-of-the-javascript-ninja  
+[Eloquente JavaScript](https://github.com/braziljs/eloquente-javascript)
+[Guia JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide)  
+[NinjaJS](https://www.manning.com/books/secrets-of-the-javascript-ninja) 
 
 #Ferramentas
-Firefox Developer Editor - https://www.mozilla.org/pt-BR/firefox/developer/  
-Firebug - https://addons.mozilla.org/pt-br/firefox/addon/firebug/  
-Nodejs - https://nodejs.org/en/  
-JSBIN - http://jsbin.com/?html,console,output  
+[Firefox Developer Editor](https://www.mozilla.org/pt-BR/firefox/developer/)
+ [Firebug](https://addons.mozilla.org/pt-br/firefox/addon/firebug/)
+[Nodejs](https://nodejs.org/en/)
+[JSBIN](http://jsbin.com/?html,console,output)  
 
 #Expressão e Afirmação
-* expressão = sentença(...afirmação); <- Ponto e vírgula
+_expressão = sentença(...afirmação)**;**_
 * * O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
 ```javascript
 ;
@@ -27,8 +30,7 @@ JSBIN - http://jsbin.com/?html,console,output
 !false;
 ```
 
-#Palavras-chave e Palavras Reservadas
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
+#[Palavras-chave e Palavras Reservadas](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference)
 
 #Variáveis
 Usa a palavra reservada var, Não permite nomes reservados.   
@@ -59,12 +61,12 @@ typeof 3.14 === 'number';
 typeof Math.LN2 === 'number';
 typeof Infinity === 'number'; 
 ```
-Infinity e -Infinity, representam os infinitos positivo e negativo. 
+*Infinity e -Infinity, representam os infinitos positivo e negativo.*
 ```javascript
 typeof NaN === 'number';
 typeof Number(1) === 'number'; 
 ```
-NaN = “not a number” //(não é um número), mesmo sabendo que ele é um valor do tipo número. calcular 0 / 0 (zero dividido por zero), Infinity - Infinity;
+*NaN = “not a number” //(não é um número), mesmo sabendo que ele é um valor do tipo número. calcular 0 / 0 (zero dividido por zero), Infinity - Infinity;*
 
 ##Strings
 ```javascript
@@ -102,9 +104,10 @@ typeof blabla === 'undefined';
 ##Objetos  
 ```javascript
 typeof {a:1} === 'object';
-typeof [1, 2, 4] === 'object'; //https://developer.mozilla.org/pt-BR/docs/Glossario/array
+typeof [1, 2, 4] === 'object';
 typeof new Date() === 'object';
 ```
+[por quê um array é object?](https://developer.mozilla.org/pt-BR/docs/Glossario/array) 
 
 ##Funções
 ```javascript
@@ -132,8 +135,7 @@ console.log("teste");
 console.log(!!"teste");
 ```
 
-##Prioridade de operadores   
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+##[Prioridade de operadores](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 ```javascript
 console.log(1 + 1 == 2 && 10 * 10 > 50);
 ```
@@ -146,8 +148,8 @@ console.log(false ? 1 : 2);
 ```
 
 ##Valores Indefinidos  
-- null  
-- undefined  
+**null**
+**undefined**
 ```javascript
 console.log(null == undefined);
 ```
@@ -155,11 +157,13 @@ console.log(null == undefined);
 ##Conversão Automática de Tipo  
 ```javascript
 console.log(8 * null) // 0
+typeof(8 * null) //"number"
 console.log("5" - 1) // 4
-console.log("5" + 1) //51 
+console.log("5" + 1) //"51" 
 console.log("five" * 2) //NaN
 ```
-##Operadores: === e !==
+##[Operadores: === e !==](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Igualdade)
+Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo.
 Testa se o valor é precisamente igual (ou não) ao outro.  
 É recomendo usar para prevenir inesperadas conversões de tipo que o farão tropeçar.  
 Para null e undefined, não há problemas em usar os operadores curtos.  
@@ -181,7 +185,7 @@ Nós vimos operadores binários para aritmética (+, -, *, /, e %), um para conc
 Vários operadores unários - para negativar um número, ! para negar uma lógica, e typeof para encontrar o tipo do valor).  
 
 ##Chamada de funções
-Muitos dos valores fornecidos no ambiente padrão são do tipo function (função). 
+Muitos dos valores fornecidos no ambiente padrão são do tipo _function_ (função). 
 Uma função é um pedaço de programa envolvido por um valor. 
 ```javascript
 alert("Good morning!");
@@ -218,8 +222,6 @@ var theNumber = Number(prompt("Pick a number", ""));
 if (!isNaN(theNumber))
  alert("Your number is the square root of " + theNumber * theNumber);
 ```
-
-##Execução Condicional
 ```javascript
 var theNumber = Number(prompt("Pick a number", ""));
 if (!isNaN(theNumber))
@@ -377,8 +379,7 @@ console.log(power(4, 3));
 #JavaScript HTML DOM
 
 Quando uma página é carregada, o navegador cria um Document Object Modelo da página.  
-JavaScript pode adicionar, alterar e remover todos os elementos e atributos HTML na página.  
-JavaScript pode mudar todos os estilos CSS na página.  
+JavaScript pode adicionar, alterar e remover todos os elementos e atributos HTML e estilos CSS na página.  
 Métodos HTML DOM são ações que podem ser executadas (em Elementos HTML).  
 No DOM, todos os elementos HTML são definidos como objetos.  
 A interface de programação são as propriedades e métodos de cada objeto.  
@@ -395,7 +396,7 @@ Um método é uma ação que você pode fazer (como adicionar ou excluir um elem
 </html>
 ```
 O objeto document representa a sua página web. getElementById é um método, enquanto InnerHTML é uma propriedade.  
-regra geral = document.element.property  
+_window.document.element.property_ 
 
 #Encontrar elementos HTML  
 - document.getElementById( id ) - acha um elemento pelo id  
@@ -409,36 +410,40 @@ regra geral = document.element.property
 - element.style.property = novo estilo - altera um estilo de um elemento html  
 
 #Adicionar e eliminar Elements  
-- document.createElement( element ) - Cria um novo elemento  
-- document.removeChild( element ) -	Remove um elemento  
-- document.appendChild( element ) -	Adiciona um novo elemento  
-- document.replaceChild( element ) -	Altera um elemento    
-- document.write( text ) 	- Escrever no fluxo de saída HTML  
+-  document.createElement( element ) - Cria um novo elemento
+- document.removeChild( element ) - Remove um elemento
+- document.appendChild( element ) - Adiciona um novo elemento
+- document.replaceChild( element ) - Altera um elemento
+- document.write( text ) - Escrever no fluxo de saída HTML
 
 #Adicionando Eventos manipuladores  
 - document.getElementById( id ).onclick = function(){ code } 	- Adicionando código de manipulador de eventos para um evento onclick
 
 #Encontrar objetos HTML
-document.anchors - retorna todos os elementos <a> que tem um atributo nome  
-document.baseURI	- retorna a URI  
-document.body -	retorna o elemento <body>   	
-document.cookie - retorna o cookie  
-document.doctype - retorna o tipo de documentos  
-document.documentElement -	retorna o  elemento <html>   	
-document.documentMode - retorna o mode usado pelo navegador  
-document.documentURI - retorna a  URI do documento  
-document.domain	- retorna o nome do dominio do servidor do documento  
-document.embeds -	retorna todos <embed> elementos  	
-document.forms -	retorna todos <form> elementos 	
-document.head -	retorna o <head> elemento 	
-document.images -	retorna todos <img> elementos 	
-document.implementation -	retorna o DOM implementação 	
-document.inputEncoding -	retorna o documento encoding (character set) 	
-document.lastModified -	retorna a data e tempo que o documento foi carregado   
-document.links -	retorna todos <<area>> e <<a>> elementos que tem um atributo href  
-document.readyState -	retorna o (loading) status do documento 	
-document.referrer -	retorna o URI de referencia  	
-document.scripts -	retorna todos <script> elementos 	
-document.strictErrorChecking -	retorna if error checking is enforced 	
-document.title -	retorna o <title> elemento 	
-document.URL - retorna o completo URL do documento
+```html
+    document.anchors - retorna todos os elementos <a> que tem um atributo nome  
+    document.baseURI	- retorna a URI  
+    document.body -	retorna o elemento <body>   	
+    document.cookie - retorna o cookie  
+    document.doctype - retorna o tipo de documentos  
+    document.documentElement -	retorna o  elemento <html>   	
+    document.documentMode - retorna o mode usado pelo navegador  
+    document.documentURI - retorna a  URI do documento  
+    document.domain	- retorna o nome do dominio do servidor do documento  
+    document.embeds -	retorna todos <embed> elementos  	
+    document.forms -	retorna todos <form> elementos 	
+    document.head -	retorna o <head> elemento 	
+    document.images -	retorna todos <img> elementos 	
+    document.implementation -	retorna o DOM implementação 	
+    document.inputEncoding -	retorna o documento encoding (character set) 	
+    document.lastModified -	retorna a data e tempo que o documento foi carregado   
+    document.links -	retorna todos <area>e <a> elementos que tem um atributo href  
+    document.readyState -	retorna o (loading) status do documento 	
+    document.referrer -	retorna o URI de referencia  	
+    document.scripts -	retorna todos <script> elementos 	
+    document.strictErrorChecking -	retorna if error checking is enforced 	
+    document.title -	retorna o <title> elemento 	
+    document.URL - retorna o completo URL do documento
+```
+
+
