@@ -23,7 +23,7 @@ _O lado do servidor:_ Nodejs.
 
 #Expressão e Afirmação
 _expressão = sentença(...afirmação)**;**_
-* * O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
+* O tipo mais simples de afirmação é uma expressão com um ponto e vírgula depois dela.
 ```javascript
 ;
 1;
