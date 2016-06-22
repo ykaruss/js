@@ -11,14 +11,14 @@ _O lado cliente:_ Document Object Model (DOM).
 _O lado do servidor:_ Nodejs.
 
 #Referências
-[Eloquente JavaScript](https://github.com/braziljs/eloquente-javascript)
+[Eloquente JavaScript](https://github.com/braziljs/eloquente-javascript)  
 [Guia JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide)  
-[NinjaJS](https://www.manning.com/books/secrets-of-the-javascript-ninja) 
+[NinjaJS](https://www.manning.com/books/secrets-of-the-javascript-ninja)  
 
 #Ferramentas
-[Firefox Developer Editor](https://www.mozilla.org/pt-BR/firefox/developer/)
- [Firebug](https://addons.mozilla.org/pt-br/firefox/addon/firebug/)
-[Nodejs](https://nodejs.org/en/)
+[Firefox Developer Editor](https://www.mozilla.org/pt-BR/firefox/developer/)  
+ [Firebug](https://addons.mozilla.org/pt-br/firefox/addon/firebug/)  
+[Nodejs](https://nodejs.org/en/)  
 [JSBIN](http://jsbin.com/?html,console,output)  
 
 #Expressão e Afirmação
