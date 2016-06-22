@@ -148,7 +148,7 @@ console.log(false ? 1 : 2);
 ```
 
 ##Valores Indefinidos  
-**null**
+**null**  
 **undefined**
 ```javascript
 console.log(null == undefined);
@@ -208,7 +208,7 @@ prompt(“Qual o seu nome?”, “Entre com seu nome aqui!!!”);
 ```
 O primeiro argumento é a questão.  
 O segundo é o texto que o usuário inicia.  
-Uma linha do texto pode ser escrita dentro da janela de diálogo. Retornar isso como uma string.  
+Uma linha do texto pode ser escrita dentro da janela de diálogo, que será retornada como uma string.  
 
 ##Fluxo de Controle
 ```javascript
@@ -281,7 +281,7 @@ console.log(board);
 ```
 
 ##Indentando Código
-O papel da indentação é que a estrutura do código se destaque.  
+O papel da indentação é fazer a estrutura do código se destacar.  
 Em códigos complexos, onde temos blocos dentro de blocos, pode se tornar extremamente difícil distinguir onde um bloco começa e o outro termina.  
 Com a indentação adequada, o formato visual do programa corresponde ao formato dos blocos contidos nele.  
 
@@ -319,7 +319,7 @@ switch (prompt("What is the weather like?")) {
 
 ##Comentários
 // linha  
-/* e 
+/* e   
 bloco */ 
 
 ##Função
@@ -376,6 +376,38 @@ function power(base, exponent) {
 console.log(power(4));
 console.log(power(4, 3));
 ```
+
+#Closure
+```javascript
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+var twice = multiplier(2);
+console.log(twice(5));
+```
+#Recursão
+```javascript
+function power(base, exponent) {
+  if (exponent == 0)
+    return 1;
+  else
+    return base * power(base, exponent - 1);
+}
+console.log(power(2, 3));
+```
+```javascript
+function mul(a, b) {
+  if (b == 1)
+    return a;
+  else
+    return a + (mul(a, b - 1));
+}
+console.log(mul(2, 8));
+```
+
+
 #JavaScript HTML DOM
 
 Quando uma página é carregada, o navegador cria um Document Object Modelo da página.  
