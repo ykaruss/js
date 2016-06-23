@@ -398,15 +398,12 @@ function power(base, exponent) {
 console.log(power(2, 3));
 ```
 ```javascript
-function mul(a, b) {
-  if (b == 1)
-    return a;
-  else
-    return a + (mul(a, b - 1));
-}
+function mul(a, b){ return b == 1 ? a : a+(mul(a, b - 1));}
 console.log(mul(2, 8));
 ```
-
+```javascript
+ function fat(n){return n ? n*fat(n-1) : 1 };
+```
 
 #JavaScript HTML DOM
 
