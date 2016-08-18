@@ -213,7 +213,7 @@ Uma linha do texto pode ser escrita dentro da janela de diálogo, que será reto
 ##Fluxo de Controle
 ```javascript
 var theNumber = Number(prompt("Escolha um numero!", ""));
-alert("Seu numero ao quadrado é: " + theNumber * theNumber);
+alert("Seu numero ao quadrado é: " + Math.pow(theNumber,2));
 ```
 
 ##Execução Condicional
@@ -403,6 +403,24 @@ console.log(mul(2, 8));
 ```
 ```javascript
  function fat(n){return n ? n*fat(n-1) : 1 };
+```
+#Memoização
+```javascript
+function isPrime(value){
+	if(!isPrime.answers) isPrime.answers = {};
+	if(isPrime.answers[value] != null) return isPrime.answers[value];
+	
+	var prime = value != 1;
+	for(var i = 2; i<value;i++){
+		if (value % i == 0){
+			prime = false;
+			break;
+		}
+	}
+	return isPrime.answers[value] = prime;
+}
+console.log(isPrime(5), "5 is prime!");
+console.log(isPrime.answers[5], "The answer was cached!");
 ```
 
 #JavaScript HTML DOM
