@@ -107,7 +107,7 @@ typeof {a:1} === 'object';
 typeof [1, 2, 4] === 'object';
 typeof new Date() === 'object';
 ```
-[por quê um array é object?](https://developer.mozilla.org/pt-BR/docs/Glossario/array) 
+[Em JavaScript, um array é um objeto que pode ser manipulado à partir de vários métodos.](https://developer.mozilla.org/pt-BR/docs/Glossario/array) 
 
 ##Funções
 ```javascript
@@ -141,7 +141,6 @@ console.log(1 + 1 == 2 && 10 * 10 > 50);
 ```
 
 ##Operador ternário  
-Ele é escrito usando um ponto de interrogação e dois pontos, como mostrado abaixo:  
 ```javascript
 console.log(true ? 1 : 2);
 console.log(false ? 1 : 2);
@@ -182,7 +181,7 @@ console.log(" " && 1)
 Alguns valores são criados digitando seu nome (true, null) ou valores (13, "abc").  
 Eles podem ser combinados e transformados com operadores.  
 Nós vimos operadores binários para aritmética (+, -, *, /, e %), um para concatenação de string (+), comparação (==, !=, ===, !==, <, >, <=, >=) e lógica (&&, ||).  
-Vários operadores unários - para negativar um número, ! para negar uma lógica, e typeof para encontrar o tipo do valor).  
+Vários operadores unários - para negativar um número, ! para negar uma lógica, e typeof para encontrar o tipo do valor.  
 
 ##Chamada de funções
 Muitos dos valores fornecidos no ambiente padrão são do tipo _function_ (função). 
@@ -220,12 +219,12 @@ alert("Seu numero ao quadrado é: " + Math.pow(theNumber,2));
 ```javascript
 var theNumber = Number(prompt("Pick a number", ""));
 if (!isNaN(theNumber))
- alert("Your number is the square root of " + theNumber * theNumber);
+ alert("Your number is the square root of " + Math.pow(theNumber,2));
 ```
 ```javascript
 var theNumber = Number(prompt("Pick a number", ""));
 if (!isNaN(theNumber))
- alert("Your number is the square root of " + theNumber * theNumber);
+ alert("Your number is the square root of " + Math.pow(theNumber,2));
 else
  alert("Hey. Why didn't you give me a number?");
 ```
@@ -256,10 +255,8 @@ console.log(name);
 ```javascript
 var pin = Number(prompt("Qnts PIN?"));
 for (var n = 1; n <= pin; n++) {
- var output = "";
-if (n % 3 == 0)
- output += "Pin";
-Console.log(output);
+  (n % 3 == 0) ? output = "Pin" : output = n;
+  console.log(output);
 };
 ```
 ```javascript
@@ -354,7 +351,7 @@ Essa característica de localidade das variáveis se aplica somente aos parâmet
 ```javascript
 var x = "outside";
 var f1 = function() {
-  var x = "inside f1";
+  var x = "inside f1"; //var define o escopo de execução!
 };
 f1();
 console.log(x);
@@ -384,8 +381,10 @@ function multiplier(factor) {
     return number * factor;
   };
 }
-var twice = multiplier(2);
-console.log(twice(5));
+var twice = multiplier(2);//define uma variável cujo multiplicado é 2
+var tri = multiplier(3);//define uma variável cujo multiplicado é 2
+console.log(twice(5));//chama a variável para mutiplicar com 2
+console.log(tri(5));//chama a variável para mutiplicar com 3
 ```
 #Recursão
 ```javascript
