@@ -445,51 +445,133 @@ O objeto document representa a sua página web. getElementById é um método, en
 _window.document.element.property_ 
 
 #Encontrar elementos HTML  
-- document.getElementById( id ) - acha um elemento pelo id  
-- document.getElementsByTagName( name ) - acha uma elemento pelo nome  
-- document.getElementsByClassName( name ) - acha uma elemento pela class  
-
+- document.getElementById( id ) - encontra um elemento pelo id
+```html
+<!DOCTYPE html>
+<p id="intro">Hello World!</p>
+<p>This example demonstrates the <b>getElementById</b> method!</p>
+<p id="demo"></p>
+<script>
+var myElement = document.getElementById("intro");
+document.getElementById("demo").innerHTML = 
+"The text from the intro paragraph is " + myElement.innerHTML;
+</script>
+```
+- document.getElementsByTagName( name ) - encontra um elemento pelo nome  
+```html
+<!DOCTYPE html>
+<p>Hello World!</p>
+<p>The DOM is very useful.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+<p id="demo"></p>
+<script>
+var x = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) is: ' + x[0].innerHTML;
+</script>
+```
+- document.getElementsByClassName( name ) - encontra um elemento pela class
+```html
+<!DOCTYPE html>
+<p>Hello World!</p>
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+<p id="demo"></p>
+<script>
+var x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+```
+- document.querySelectorAll( "css" ) - encontra um elemento pela seletor css
+```html
+<!DOCTYPE html>
+<p>Hello World!</p>
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+<p id="demo"></p>
+<script>
+var x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+```
 #Mudando elementos HTML
 - element.innerHTML = novo conteúdo - altera o html interno de um elemento  
-- element.attribute = novo vamlor -  	altera o valor de uma atributo interno de um html  
-- element.setAttribute (attribute, value) 	- altera o atributo de um elemento html  
+- element.attribute = novo valor - altera o valor de uma atributo interno de um html  
+- element.setAttribute (attribute, value) - altera o atributo de um elemento html  
 - element.style.property = novo estilo - altera um estilo de um elemento html  
 
 #Adicionar e eliminar Elements  
 -  document.createElement( element ) - Cria um novo elemento
+```html
+<!DOCTYPE html>
+<script>document.createElement("myHero")</script>
+<style>
+ myHero {
+ 	display: block;
+      	background-color: red;
+      	padding: 50px;
+      	font-size: 30px;
+ }  
+</style>
+<h1>A Heading</h1>
+<myHero>My Hero Element</myHero>
+```
 - document.removeChild( element ) - Remove um elemento
+
+```html
+<!DOCTYPE html>
+<ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+<p>Click the button to remove the first item from the list.</p>
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+    var list = document.getElementById("myList");
+    list.removeChild(list.childNodes[0]);
+}
+</script>
+```
 - document.appendChild( element ) - Adiciona um novo elemento
 - document.replaceChild( element ) - Altera um elemento
 - document.write( text ) - Escrever no fluxo de saída HTML
 
-#Adicionando Eventos manipuladores  
-- document.getElementById( id ).onclick = function(){ code } 	- Adicionando código de manipulador de eventos para um evento onclick
-
-#Encontrar objetos HTML
+#Adicionando um Evento
 ```html
-    document.anchors - retorna todos os elementos <a> que tem um atributo nome  
-    document.baseURI	- retorna a URI  
-    document.body -	retorna o elemento <body>   	
-    document.cookie - retorna o cookie  
-    document.doctype - retorna o tipo de documentos  
-    document.documentElement -	retorna o  elemento <html>   	
-    document.documentMode - retorna o mode usado pelo navegador  
-    document.documentURI - retorna a  URI do documento  
-    document.domain	- retorna o nome do dominio do servidor do documento  
-    document.embeds -	retorna todos <embed> elementos  	
-    document.forms -	retorna todos <form> elementos 	
-    document.head -	retorna o <head> elemento 	
-    document.images -	retorna todos <img> elementos 	
-    document.implementation -	retorna o DOM implementação 	
-    document.inputEncoding -	retorna o documento encoding (character set) 	
-    document.lastModified -	retorna a data e tempo que o documento foi carregado   
-    document.links -	retorna todos <area>e <a> elementos que tem um atributo href  
-    document.readyState -	retorna o (loading) status do documento 	
-    document.referrer -	retorna o URI de referencia  	
-    document.scripts -	retorna todos <script> elementos 	
-    document.strictErrorChecking -	retorna if error checking is enforced 	
-    document.title -	retorna o <title> elemento 	
-    document.URL - retorna o completo URL do documento
+<!DOCTYPE html>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+}
+function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+}
+</script>
 ```
-
-
+#Adicionando Eventos manipuladores  
+```html
+<!DOCTYPE html>
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+<button id="myBtn">Try it</button>
+<p id="demo"></p>
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+function myFunction() {
+    document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+function mySecondFunction() {
+    document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+function myThirdFunction() {
+    document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+```
