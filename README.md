@@ -107,7 +107,7 @@ typeof {a:1} === 'object';
 typeof [1, 2, 4] === 'object';
 typeof new Date() === 'object';
 ```
-[Em JavaScript, um array é um objeto que pode ser manipulado à partir de vários métodos.](https://developer.mozilla.org/pt-BR/docs/Glossario/array) 
+[Em JavaScript, um array é um objeto que pode ser manipulado a partir de vários métodos.](https://developer.mozilla.org/pt-BR/docs/Glossario/array) 
 
 ##Funções
 ```javascript
