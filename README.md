@@ -73,7 +73,6 @@ typeof Number(1) === 'number';
 typeof "" === 'string';
 typeof "bla" === 'string';
 typeof (typeof 1) === 'string'; 
-typeof always return a string
 typeof String("abc") === 'string'; 
 typeof String("This is the first line\nAnd this is the second") === 'string';
 typeof String("con" + "cat" + "e" + "nate") === 'string';
@@ -554,6 +553,7 @@ function mUp(obj) {
 </script>
 ```
 #Adicionando Eventos manipuladores  
+[Exemplo](https://jsbin.com/yacagos/edit?html,js,output)
 ```html
 <!DOCTYPE html>
 <p>This example uses the addEventListener() method to add many events on the same button.</p>
